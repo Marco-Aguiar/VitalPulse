@@ -1,7 +1,7 @@
-package med.voll.api.controller;
+package med.vitaPulse.api.controller;
 
 import jakarta.validation.Valid;
-import med.voll.api.medico.*;
+import med.vitaPulse.api.medico.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
