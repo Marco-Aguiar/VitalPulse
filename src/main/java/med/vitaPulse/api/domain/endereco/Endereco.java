@@ -1,4 +1,4 @@
-package med.vitaPulse.api.endereco;
+package med.vitaPulse.api.domain.endereco;
 
 import jakarta.persistence.Embeddable;
 import lombok.AllArgsConstructor;

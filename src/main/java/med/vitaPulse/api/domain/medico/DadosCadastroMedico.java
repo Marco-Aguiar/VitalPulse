@@ -1,11 +1,11 @@
-package med.vitaPulse.api.medico;
+package med.vitaPulse.api.domain.medico;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
-import med.vitaPulse.api.endereco.DadosEndereco;
+import med.vitaPulse.api.domain.endereco.DadosEndereco;
 
 public record DadosCadastroMedico(
         @NotBlank

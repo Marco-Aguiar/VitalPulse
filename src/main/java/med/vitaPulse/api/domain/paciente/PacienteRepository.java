@@ -1,4 +1,4 @@
-package med.vitaPulse.api.paciente;
+package med.vitaPulse.api.domain.paciente;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
