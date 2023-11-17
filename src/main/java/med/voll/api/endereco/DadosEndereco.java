@@ -1,4 +1,4 @@
-package med.vitaPulse.api.endereco;
+package med.voll.api.endereco;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;

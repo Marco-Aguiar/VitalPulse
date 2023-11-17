@@ -1,4 +1,4 @@
-package med.vitaPulse.api.medico;
+package med.voll.api.medico;
 
 public enum Especialidade {
 

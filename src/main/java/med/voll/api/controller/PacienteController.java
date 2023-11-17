@@ -1,7 +1,7 @@
-package med.vitaPulse.api.controller;
+package med.voll.api.controller;
 
 import jakarta.validation.Valid;
-import med.vitaPulse.api.paciente.*;
+import med.voll.api.paciente.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -32,6 +32,7 @@ public class PacienteController {
     public void atualizar(@RequestBody @Valid DadosAtualizacaoPaciente dados) {
         var paciente = repository.getReferenceById(dados.id());
         paciente.atualizarInformacoes(dados);
+        System.out.println("oi");
     }
 
     @DeleteMapping("/{id}")
