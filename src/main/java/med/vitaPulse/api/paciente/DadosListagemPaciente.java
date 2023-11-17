@@ -1,4 +1,4 @@
-package med.voll.api.paciente;
+package med.vitaPulse.api.paciente;
 
 public record DadosListagemPaciente(Long id, String nome, String email, String cpf) {
 
