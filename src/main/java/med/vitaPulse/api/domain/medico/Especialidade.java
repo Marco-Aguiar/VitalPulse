@@ -3,7 +3,7 @@ package med.vitaPulse.api.domain.medico;
 public enum Especialidade {
 
     ORTOPEDIA,
-    CARDIOLOGIA,
+    CARDIOLOGISTA,
     GINECOLOGIA,
     DENTISTA,
     NUTRICIONISTA,

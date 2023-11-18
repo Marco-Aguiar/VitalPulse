@@ -1,4 +1,4 @@
-package med.vitaPulse.api.infra;
+package med.vitaPulse.api.infra.exception;
 
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.http.ResponseEntity;
