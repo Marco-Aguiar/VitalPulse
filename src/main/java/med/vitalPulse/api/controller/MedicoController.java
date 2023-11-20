@@ -1,5 +1,6 @@
 package med.vitalPulse.api.controller;
 
+import com.auth0.jwt.exceptions.JWTCreationException;
 import jakarta.validation.Valid;
 import med.vitalPulse.api.domain.medico.DadosListagemMedico;
 import med.vitalPulse.api.domain.medico.Medico;
@@ -13,6 +14,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
+
+import java.sql.SQLException;
 
 @RestController
 @RequestMapping("medicos")
@@ -62,5 +65,22 @@ public class MedicoController {
         return ResponseEntity.ok(new DadosDetalhamentoMedico(medico));
     }
 
+    @GetMapping("/nome")
+    public ResponseEntity<Page<DadosListagemMedico>> listarNomes(@RequestBody @Valid NomeMedicoConsulta nome, @PageableDefault(size = 10, sort = {"nome"}) Pageable paginacao) {
+            var page = repository.findAllByNome(nome.nome(), paginacao).map(DadosListagemMedico::new);
+            return ResponseEntity.ok(page);
+    }
+
+    @GetMapping("/ativos")
+    public ResponseEntity<Page<DadosListagemMedico>> listarAtivos(@PageableDefault(size = 10, sort = {"nome"}) Pageable paginacao) {
+        var page = repository.findAllByAtivos(paginacao).map(DadosListagemMedico::new);
+        return ResponseEntity.ok(page);
+    }
+
+    @GetMapping("/inativos")
+    public ResponseEntity<Page<DadosListagemMedico>> listarInativos(@PageableDefault(size = 10, sort = {"nome"}) Pageable paginacao) {
+        var page = repository.findAllByInativos(paginacao).map(DadosListagemMedico::new);
+        return ResponseEntity.ok(page);
+    }
 
 }

@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -32,6 +33,17 @@ public class AutenticacaoController {
         var tokenJWT = tokenService.gerarToken((Usuario) authentication.getPrincipal());
 
         return ResponseEntity.ok(new DadosTokenJWT(tokenJWT));
+    }
+
+    @PostMapping("/criar")
+    public ResponseEntity criarLogin(@RequestBody @Valid DadosAutenticacao dados) {
+        System.out.println("Caiu aqui");
+        System.out.println(dados.senha());
+        BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder();
+        var senhaCriptografada  = bCryptPasswordEncoder.encode(dados.senha());
+        System.out.println(senhaCriptografada);
+
+        return ResponseEntity.ok().build();
     }
 
 }

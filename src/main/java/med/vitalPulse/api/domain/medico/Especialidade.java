@@ -6,6 +6,7 @@ public enum Especialidade {
     CARDIOLOGISTA,
     GINECOLOGISTA,
     DENTISTA,
+    FISIOTERAPEUTA,
     NUTRICIONISTA,
     DERMATOLOGISTA;
 
