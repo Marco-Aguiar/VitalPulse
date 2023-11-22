@@ -1,11 +1,16 @@
 package med.vitalPulse.api.controller;
 
 import jakarta.validation.Valid;
+import med.vitalPulse.api.domain.usuario.AutenticacaoService;
 import med.vitalPulse.api.domain.usuario.DadosAutenticacao;
 import med.vitalPulse.api.domain.usuario.Usuario;
+import med.vitalPulse.api.infra.exception.ValidacaoException;
 import med.vitalPulse.api.infra.security.DadosTokenJWT;
+import med.vitalPulse.api.infra.security.SecurityRepository;
 import med.vitalPulse.api.infra.security.TokenService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -18,6 +23,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/login")
 public class AutenticacaoController {
+
+    @Autowired
+    SecurityRepository securityRepository;
+
+    @Autowired
+    AutenticacaoService autenticacaoService;
 
     @Autowired
     private AuthenticationManager manager;
@@ -36,14 +47,9 @@ public class AutenticacaoController {
     }
 
     @PostMapping("/criar")
-    public ResponseEntity criarLogin(@RequestBody @Valid DadosAutenticacao dados) {
-        System.out.println("Caiu aqui");
-        System.out.println(dados.senha());
-        BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder();
-        var senhaCriptografada  = bCryptPasswordEncoder.encode(dados.senha());
-        System.out.println(senhaCriptografada);
-
-        return ResponseEntity.ok().build();
+    public ResponseEntity criarLogin(@RequestBody @Valid DadosAutenticacao dados, @PageableDefault(size = 10, sort = {"nome"}) Pageable paginacao) {
+        autenticacaoService.criarLogin(dados.login(), dados.senha());
+        return ResponseEntity.ok("Usuário cadastrado com sucesso!");
     }
 
 }
