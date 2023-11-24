@@ -1,10 +1,10 @@
-<h1 align="center">VitaPulse - Marco Aguiar 💻</h1>
+<h1 align="center">VitalPulse - Marco Aguiar 💻</h1>
 
 ---
 
 ## 💻 Sobre
 
-VitaPulse é um projeto back end com a finalidade de desenvolver minhas skills em API's REST e Spring Boot.
+VitalPulse é um projeto back end com a finalidade de desenvolver minhas skills em API's REST e Spring Boot.
 
 ## 🧠 Tecnologias utilizadas:
 <div>
