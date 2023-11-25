@@ -1,7 +1,7 @@
-package med.vitalPulse.api.domain.consulta.validacoes.agendamento;
+package med.vitalpulse.api.domain.consulta.validacoes.agendamento;
 
-import med.vitalPulse.api.domain.consulta.DadosAgendamentoConsulta;
-import med.vitalPulse.api.infra.exception.ValidacaoException;
+import med.vitalpulse.api.domain.ValidacaoException;
+import med.vitalpulse.api.domain.consulta.DadosAgendamentoConsulta;
 import org.springframework.stereotype.Component;
 
 import java.time.Duration;

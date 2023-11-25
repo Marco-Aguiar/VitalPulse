@@ -1,13 +1,13 @@
-package med.vitalPulse.api.domain.medico;
+package med.vitalpulse.api.domain.medico;
 
 public enum Especialidade {
 
     ORTOPEDISTA,
     CARDIOLOGISTA,
-    GINECOLOGISTA,
     DENTISTA,
-    FISIOTERAPEUTA,
     NUTRICIONISTA,
+    GINECOLOGISTA,
+    FISIOTERAPEUTA,
     DERMATOLOGISTA;
 
 }

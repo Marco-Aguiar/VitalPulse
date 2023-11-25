@@ -1,8 +1,8 @@
-package med.vitalPulse.api.domain.consulta.validacoes.cancelamento;
+package med.vitalpulse.api.domain.consulta.validacoes.cancelamento;
 
-import med.vitalPulse.api.domain.consulta.ConsultaRepository;
-import med.vitalPulse.api.domain.consulta.DadosCancelamentoConsulta;
-import med.vitalPulse.api.infra.exception.ValidacaoException;
+import med.vitalpulse.api.domain.ValidacaoException;
+import med.vitalpulse.api.domain.consulta.ConsultaRepository;
+import med.vitalpulse.api.domain.consulta.DadosCancelamentoConsulta;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

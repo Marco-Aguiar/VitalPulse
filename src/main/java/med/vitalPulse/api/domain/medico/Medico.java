@@ -1,11 +1,11 @@
-package med.vitalPulse.api.domain.medico;
+package med.vitalpulse.api.domain.medico;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import med.vitalPulse.api.domain.endereco.Endereco;
+import med.vitalpulse.api.domain.endereco.Endereco;
 
 @Table(name = "medicos")
 @Entity(name = "Medico")

@@ -1,8 +1,8 @@
-package med.vitalPulse.api.domain.consulta;
+package med.vitalpulse.api.domain.consulta;
 
 import jakarta.validation.constraints.Future;
 import jakarta.validation.constraints.NotNull;
-import med.vitalPulse.api.domain.medico.Especialidade;
+import med.vitalpulse.api.domain.medico.Especialidade;
 
 import java.time.LocalDateTime;
 

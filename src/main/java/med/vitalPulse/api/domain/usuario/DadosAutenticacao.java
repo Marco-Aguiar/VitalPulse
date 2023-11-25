@@ -1,4 +1,4 @@
-package med.vitalPulse.api.domain.usuario;
+package med.vitalpulse.api.domain.usuario;
 
 public record DadosAutenticacao(String login, String senha) {
 }

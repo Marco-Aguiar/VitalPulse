@@ -1,11 +1,11 @@
-package med.vitalPulse.api.domain.consulta;
+package med.vitalpulse.api.domain.consulta;
 
-import med.vitalPulse.api.domain.consulta.validacoes.agendamento.ValidadorAgendamentoDeConsulta;
-import med.vitalPulse.api.domain.consulta.validacoes.cancelamento.ValidadorCancelamentoDeConsulta;
-import med.vitalPulse.api.domain.medico.Medico;
-import med.vitalPulse.api.domain.medico.MedicoRepository;
-import med.vitalPulse.api.domain.paciente.PacienteRepository;
-import med.vitalPulse.api.infra.exception.ValidacaoException;
+import med.vitalpulse.api.domain.ValidacaoException;
+import med.vitalpulse.api.domain.consulta.validacoes.agendamento.ValidadorAgendamentoDeConsulta;
+import med.vitalpulse.api.domain.consulta.validacoes.cancelamento.ValidadorCancelamentoDeConsulta;
+import med.vitalpulse.api.domain.medico.Medico;
+import med.vitalpulse.api.domain.medico.MedicoRepository;
+import med.vitalpulse.api.domain.paciente.PacienteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

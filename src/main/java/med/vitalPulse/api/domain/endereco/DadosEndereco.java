@@ -1,4 +1,4 @@
-package med.vitalPulse.api.domain.endereco;
+package med.vitalpulse.api.domain.endereco;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;

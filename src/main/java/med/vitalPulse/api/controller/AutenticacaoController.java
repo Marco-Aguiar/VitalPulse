@@ -1,20 +1,17 @@
-package med.vitalPulse.api.controller;
+package med.vitalpulse.api.controller;
 
 import jakarta.validation.Valid;
-import med.vitalPulse.api.domain.usuario.AutenticacaoService;
-import med.vitalPulse.api.domain.usuario.DadosAutenticacao;
-import med.vitalPulse.api.domain.usuario.Usuario;
-import med.vitalPulse.api.infra.exception.ValidacaoException;
-import med.vitalPulse.api.infra.security.DadosTokenJWT;
-import med.vitalPulse.api.infra.security.SecurityRepository;
-import med.vitalPulse.api.infra.security.TokenService;
+import med.vitalpulse.api.domain.usuario.AutenticacaoService;
+import med.vitalpulse.api.domain.usuario.DadosAutenticacao;
+import med.vitalpulse.api.domain.usuario.Usuario;
+import med.vitalpulse.api.infra.security.DadosTokenJWT;
+import med.vitalpulse.api.infra.security.TokenService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,13 +22,10 @@ import org.springframework.web.bind.annotation.RestController;
 public class AutenticacaoController {
 
     @Autowired
-    SecurityRepository securityRepository;
+    private AuthenticationManager manager;
 
     @Autowired
     AutenticacaoService autenticacaoService;
-
-    @Autowired
-    private AuthenticationManager manager;
 
     @Autowired
     private TokenService tokenService;

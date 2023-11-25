@@ -1,10 +1,10 @@
-package med.vitalPulse.api.infra.security;
+package med.vitalpulse.api.infra.security;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.exceptions.JWTCreationException;
 import com.auth0.jwt.exceptions.JWTVerificationException;
-import med.vitalPulse.api.domain.usuario.Usuario;
+import med.vitalpulse.api.domain.usuario.Usuario;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
@@ -22,7 +22,7 @@ public class TokenService {
         try {
             var algoritmo = Algorithm.HMAC256(secret);
             return JWT.create()
-                    .withIssuer("API vitalPulse.med")
+                    .withIssuer("API vitalpulse.med")
                     .withSubject(usuario.getLogin())
                     .withExpiresAt(dataExpiracao())
                     .sign(algoritmo);
@@ -35,7 +35,7 @@ public class TokenService {
         try {
             var algoritmo = Algorithm.HMAC256(secret);
             return JWT.require(algoritmo)
-                    .withIssuer("API vitalPulse.med")
+                    .withIssuer("API vitalpulse.med")
                     .build()
                     .verify(tokenJWT)
                     .getSubject();

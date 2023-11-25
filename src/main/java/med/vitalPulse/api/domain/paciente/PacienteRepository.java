@@ -1,4 +1,4 @@
-package med.vitalPulse.api.domain.paciente;
+package med.vitalpulse.api.domain.paciente;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -12,7 +12,7 @@ public interface PacienteRepository extends JpaRepository<Paciente, Long> {
             select p.ativo
             from Paciente p
             where
-            p.id = :idPaciente
+            p.id = :id
             """)
-    Boolean findAtivoById(Long idPaciente);
+    Boolean findAtivoById(Long id);
 }

@@ -1,12 +1,10 @@
-package med.vitalPulse.api.infra.security;
+package med.vitalpulse.api.infra.security;
 
-import med.vitalPulse.api.domain.usuario.Usuario;
+import med.vitalpulse.api.domain.usuario.Usuario;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
-
-import java.time.LocalDateTime;
 
 public interface SecurityRepository extends JpaRepository<Usuario, Long> {
 

@@ -1,9 +1,8 @@
-package med.vitalPulse.api.domain.usuario;
+package med.vitalpulse.api.domain.usuario;
 
-import med.vitalPulse.api.infra.exception.ValidacaoException;
-import med.vitalPulse.api.infra.security.SecurityRepository;
+import med.vitalpulse.api.domain.ValidacaoException;
+import med.vitalpulse.api.infra.security.SecurityRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -14,10 +13,10 @@ import org.springframework.stereotype.Service;
 public class AutenticacaoService implements UserDetailsService {
 
     @Autowired
-    SecurityRepository securityRepository;
+    private UsuarioRepository repository;
 
     @Autowired
-    private UsuarioRepository repository;
+    SecurityRepository securityRepository;
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {

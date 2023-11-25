@@ -1,6 +1,6 @@
-package med.vitalPulse.api.domain.medico;
+package med.vitalpulse.api.domain.medico;
 
-import med.vitalPulse.api.domain.endereco.Endereco;
+import med.vitalpulse.api.domain.endereco.Endereco;
 
 public record DadosDetalhamentoMedico(Long id, String nome, String email, String crm, String telefone, Especialidade especialidade, Endereco endereco) {
 

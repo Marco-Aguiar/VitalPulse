@@ -1,6 +1,6 @@
-package med.vitalPulse.api.domain.consulta.validacoes.agendamento;
+package med.vitalpulse.api.domain.consulta.validacoes.agendamento;
 
-import med.vitalPulse.api.domain.consulta.DadosAgendamentoConsulta;
+import med.vitalpulse.api.domain.consulta.DadosAgendamentoConsulta;
 
 public interface ValidadorAgendamentoDeConsulta {
 

@@ -1,6 +1,6 @@
-package med.vitalPulse.api.domain.consulta.validacoes.cancelamento;
+package med.vitalpulse.api.domain.consulta.validacoes.cancelamento;
 
-import med.vitalPulse.api.domain.consulta.DadosCancelamentoConsulta;
+import med.vitalpulse.api.domain.consulta.DadosCancelamentoConsulta;
 
 public interface ValidadorCancelamentoDeConsulta {
 

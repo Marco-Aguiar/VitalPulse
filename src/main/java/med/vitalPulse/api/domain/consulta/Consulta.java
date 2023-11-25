@@ -1,12 +1,12 @@
-package med.vitalPulse.api.domain.consulta;
+package med.vitalpulse.api.domain.consulta;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import med.vitalPulse.api.domain.medico.Medico;
-import med.vitalPulse.api.domain.paciente.Paciente;
+import med.vitalpulse.api.domain.medico.Medico;
+import med.vitalpulse.api.domain.paciente.Paciente;
 
 import java.time.LocalDateTime;
 

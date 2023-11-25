@@ -1,4 +1,4 @@
-package med.vitalPulse.api.domain.consulta;
+package med.vitalpulse.api.domain.consulta;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
