@@ -24,4 +24,4 @@ Neste projeto apliquei os seguintes pontos:
 + MYSQL;
 + Java Security;
 + Jakarta Validation;
-  
++ JUNIT;
