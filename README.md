@@ -29,6 +29,6 @@ This project was a hands-on opportunity to apply and deepen my understanding of 
 ---
 📫 Contact
 
-Developed by Marco Aguiar
-➡️ [LinkedIn](https://www.linkedin.com/in/marco-aguiar-sp/)
+Developed by Marco Aguiar<br>
+➡️ [LinkedIn](https://www.linkedin.com/in/marco-aguiar-sp/)<br>
 ➡️ [Github](https://github.com/Marco-Aguiar)
